@@ -95,24 +95,17 @@ void prime(int a)
 
 }
 void square(int b){
-   int temp,rem,c,sum=0;
-   temp=b;
-   c=b%10;
-   if(c=1||4||5||6||9||0)
-   {
-       while(b!=0)
-       {
-       rem=b%10;
-       sum=sum+rem;
-       b=b/10;
-       }
-       if(sum%2!=0)
-       printf("%d is a square number",temp);
-       else if(sum=4)
-       printf("%d is a square number",temp);
-   }
-   else
-   printf("%d is a not a square number",temp);
+   int squ;
+    for (int i=1;i<b;i++)
+    {
+        squ=i*i;
+        if(squ==b){
+        printf("%d is a squre number ",b);
+        return ;
+    }
+    }
+    printf("%d is not a squre number",b);
+    return ;
 }
 void fact(int d){
     int fact=1;
